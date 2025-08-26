@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Energy & Water Usage Monitor</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<div class="container">
+  <h2>Daily Usage Calculator</h2>
+
+  <!-- Electricity Section -->
+  <div class="section">
+    <h3>⚡ Electricity Usage</h3>
+    <p class="desc">
+    Enter your daily electricity usage in <b>kWh (kilowatt-hour)</b>.  
+    <br> 1 unit = 1 kWh.  Example:TV (3 hrs)≈ 0.3, Fan (10 hrs)≈ 0.7 .</br>
+    </p>
+
+    <label for="electricity">Electricity Usage (kWh): </label>
+    <input type="number" id="electricity" placeholder="Enter kWh"  onkeydown="if(event.key === 'Enter'){ calcElectricity(); return false; }">
+    <br><br>
+    <button onclick="calcElectricity()">Calculate Electricity</button>
+    </br></br>
+    <div id="electricityOutput" class="output"></div>
+  </div>
+
+  <hr>
+
+  <!-- Water Section -->
+  <div class="section">
+    <h3>💧 Water Usage</h3>
+    <p class="desc">
+     Enter your daily water usage in <b>liters</b>.  
+    <br>Example: Shower (5 mins) ≈ 50 liters, Toilet flush ≈ 6 liters.</br>
+    </p>
+    <label for="water">Water Usage (Liters): </label>
+    <input type="number" id="water" placeholder="Enter liters" onkeydown="if(event.key === 'Enter'){ calcWater(); return false; }">
+    <br><br>
+    <button onclick="calcWater()">Calculate Water</button>
+   </br></br>
+    <div id="waterOutput" class="output"></div>
+  </div>
+</div>
+</body>
+</html>
